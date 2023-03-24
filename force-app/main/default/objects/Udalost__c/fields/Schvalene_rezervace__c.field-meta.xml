@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Schvalene_rezervace__c</fullName>
+    <externalId>false</externalId>
+    <label>Schválené rezervace</label>
+    <summaryFilterItems>
+        <field>Rezervace__c.Stav__c</field>
+        <operation>equals</operation>
+        <value>Schválená</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Rezervace__c.Udalost__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

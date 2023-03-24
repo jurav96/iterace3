@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Události" icon-name="custom:custom57">
+        <div class="slds-m-around_medium">
+            <template if:true={udalosti.data}>
+                <lightning-datatable
+                    key-field="udalostId"
+                    data={udalosti.data}
+                    columns={columns}
+                    onrowselection={handleRowSelection}
+                ></lightning-datatable>
+            </template>
+            <template if:true={selectedUdalost}>
+                <lightning-button
+                    variant="brand"
+                    label="Přihlásit se na událost"
+                    title="Přihlásit se na událost"
+                    onclick={prihlasitSeNaUdalost}
+                    class="slds-m-top_small"
+                ></lightning-button>
+            </template>
+        </div>
+        <div class="slds-m-around_medium">
+            <h3 class="slds-text-heading_medium">Moje události</h3>
+            <template if:true={myEventData}>
+                <lightning-datatable
+                    key-field="udalostId"
+                    data={myEventData}
+                    columns={columns}
+                ></lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

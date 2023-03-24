@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <lightning:notificationsLibrary aura:id="notifLib" />    
+<c:udalostiLWC></c:udalostiLWC>
+</aura:component>
